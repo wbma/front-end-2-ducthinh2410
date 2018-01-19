@@ -1,0 +1,43 @@
+<!-- TASK A -->
+<div>
+  <h1>TASK A</h1>
+  <button (click)="getTsConfigFile()" name="button">Get sample data</button>
+  <div *ngIf="data">
+    <ul>
+      <li>CompileOnSave: {{data.compileOnSave}}</li>
+      <li>CompilerOptions:
+        <ul>
+          <li>outDir: {{data.compilerOptions.outDir}}</li>
+          <li>sourceMap: {{data.compilerOptions.sourceMap}}</li>
+          <li>declaration: {{data.compilerOptions.declaration}}</li>
+          <li>moduleResolution: {{data.compilerOptions.moduleResolution}}</li>
+          <li>emitDecoratorMetadata: {{data.compilerOptions.emitDecoratorMetadata}}</li>
+          <li>experimentalDecorators: {{data.compilerOptions.experimentalDecorators}}</li>
+          <li>target: {{data.compilerOptions.target}}</li>
+          <li>typeRoots:
+            <ul>
+              <li *ngFor="let item of data.compilerOptions.typeRoots">{{item}}</li>
+            </ul>
+          </li>
+          <li>libs:
+            <ul>
+              <li *ngFor="let item of data.compilerOptions.lib">{{item}}</li>
+            </ul>
+          </li>
+          <li>target: {{data.compilerOptions.target}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- TASK B -->
+<div>
+  <h1>TASK B</h1>
+  <button (click)="getMedia()">Get media</button>
+  <div *ngIf="imageURL">
+    <ul>
+      <img src="{{imageURL}}">
+    </ul>
+  </div>
+</div>
